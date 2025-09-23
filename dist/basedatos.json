@@ -1,0 +1,17 @@
+{
+  "nombre": "Escuela",
+  "tablas": {
+    "Estudiantes": {
+      "columnas": [
+        "Curso",
+        "ID"
+      ],
+      "filas": [
+        {
+          "Curso": "Matematicas",
+          "ID": "28081424"
+        }
+      ]
+    }
+  }
+}
