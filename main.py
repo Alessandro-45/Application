@@ -1,16 +1,16 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton, QLineEdit, QMessageBox
 from PyQt5.QtGui import QIcon, QFont, QPixmap
-
+import BaseDatos
 
 
 
 class MainWindow(QMainWindow):
-    def __init__(self):
+    def __init__(self, title: str):
         super().__init__()
-        self.setWindowTitle('Primera app de escritorio!')
+        self.setWindowTitle(title)
         self.setWindowIcon(QIcon('meme.webp'))
-        self.setGeometry(200, 200, 500, 500)
+        self.setGeometry(200, 200, 800, 800)
 
         # Etiqueta principal
         self.label = QLabel('Hello', self)
@@ -21,7 +21,7 @@ class MainWindow(QMainWindow):
         # Campo de texto
         self.textbox = QLineEdit(self)
         self.textbox.setGeometry(20, 100, 300, 30)
-        self.textbox.setPlaceholderText('Escribe algo aquí...')
+        self.textbox.setPlaceholderText('Ingresa un nombre para esta base de datos.')
 
         # Botón que cambia el texto y muestra mensaje
         self.button = QPushButton('Mostrar mensaje', self)
@@ -31,8 +31,8 @@ class MainWindow(QMainWindow):
         # Imagen
         self.image_label = QLabel(self)
         pixmap = QPixmap('meme.webp')
-        self.image_label.setPixmap(pixmap.scaled(200, 200))
-        self.image_label.setGeometry(150, 150, 200, 200)
+        self.image_label.setPixmap(pixmap.scaled(500, 500))
+        self.image_label.setGeometry(150, 150, 500, 500)
 
     def on_button_click(self):
         texto = self.textbox.text()
@@ -46,8 +46,9 @@ class MainWindow(QMainWindow):
 
 
 def main():
+    title = 'Base de datos'
     app = QApplication(sys.argv)
-    window = MainWindow()
+    window = MainWindow(title)
     window.show()
 
 
