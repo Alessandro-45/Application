@@ -1,0 +1,1 @@
+Este es un proyecto de una aplicacion de escritorio que va a modelar una base de datos, tratare de ser lo mas general posible de tal forma que este proyecto pueda servir como base de datos tanto para una escuela, por ejemplo, como para cualquier otro tipo de institucion, ire subiendo actualizaciones en la medida que pueda.
