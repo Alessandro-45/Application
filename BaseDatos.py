@@ -28,7 +28,7 @@ class BaseDeDatos:
         """
         if nombre_tabla not in self.tablas:
             self.tablas[nombre_tabla] = Tabla(nombre_tabla, columnas)
-            print(f"✅ Tabla '{nombre_tabla}' creada con éxito.")
+            print(f"Tabla '{nombre_tabla}' creada con éxito.")
             return True
         print(f"⚠  Advertencia: La tabla '{nombre_tabla}' ya existe.")
         return False
@@ -80,7 +80,7 @@ class Tabla:
         Ahora verifica que todas las columnas requeridas estén presentes.
         """
         if self.columnas != set(datos.keys()):
-            print(f"❌ Error de inserción: Las columnas proporcionadas no coinciden con la estructura de la tabla '{self.nombre}'.")
+            print(f"Error de inserción: Las columnas proporcionadas no coinciden con la estructura de la tabla '{self.nombre}'.")
             print(f"   Columnas requeridas: {self.columnas}")
             print(f"   Columnas dadas:      {set(datos.keys())}")
             return False
